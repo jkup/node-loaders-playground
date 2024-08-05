@@ -1,7 +1,12 @@
 import { register } from "node:module";
 import { pathToFileURL } from "node:url";
 
-const loaderPath = pathToFileURL("./custom-loader.mjs").href;
+const simpleReplaceLoaderPath = pathToFileURL(
+  "./simple-replace-loader.mjs"
+).href;
+
+const customStubLoaderPath = pathToFileURL("./custom-stub-loader.mjs").href;
 
 // Register the custom loader
-register(loaderPath, pathToFileURL("./").href);
+register(simpleReplaceLoaderPath, pathToFileURL("./").href);
+register(customStubLoaderPath, pathToFileURL("./").href);
