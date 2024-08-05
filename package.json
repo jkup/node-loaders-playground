@@ -1,0 +1,13 @@
+{
+  "name": "loaders-playground",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "example.js",
+  "scripts": {
+    "start": "node --experimental-loader ./register-loader.js --no-warnings example.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
